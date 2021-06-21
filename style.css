@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/*font-family: 'Poppins', sans-serif;*/
+
+:root{
+    --green:hsl(154, 59%, 51%);
+    --blue:  hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+*, *::after, *::before, html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background-image: url(images/bg-intro-desktop.png);
+    background-color: hsl(0, 100%, 74%);
+    color: white;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.paragrp{
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1em;
+    padding: 20px 30px;
+    line-height: 1.5em;
+}
+.paragrp h1{
+    font-size: 1.7em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+
+.price-card{ 
+    text-align: center;
+    border-radius: 10px;
+    align-self: center;
+    background-color: var(--blue);
+    padding: 20px 60px;
+    margin: 5px 20px;
+    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.price-card span{
+    font-weight: bold;
+}
+
+.input-card input{
+    margin: 10px 20px;
+}
+.input-card {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    color: var(--grayish-blue);
+    max-width: 350px;
+    margin: 20px 20px;
+    border-radius: 10px;
+    min-height: 400px;
+    padding-bottom: 15px;
+    padding-top: 12px;
+    box-shadow: 0px 10px 5px -2px rgba(0, 0, 0, 0.2);
+}
+
+.input-card p{
+    font-size: 0.8em;
+    text-align: center;
+    margin: 0px 30px 10px 30px;
+}
+
+.input-container >*{
+    display: block;
+}
+
+.input-container{
+    height: 100%;
+    margin-bottom: 0px;
+}
+
+.input-container input {
+    width: 90%;
+    margin: 10px 15px;
+    height: 60px;
+    border: 0.1px solid var(--grayish-blue);
+    border-width: thin;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-weight: 700;
+}
+.input-container input:focus{
+    border: 0.1px solid var(--green);
+    background-color: wheat;
+    outline: thin;
+}
+.button-submiter{
+    width: 90%;
+    height: 60px;
+    margin: 15px 15px 15px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--green);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.button-submiter:hover{
+    background-color: white;
+    color: var(--green);
+    border: 0.1px solid var(--green);
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 1000px) {
+    .main-container{
+        margin: 110px 20pxs;
+        display: grid;
+        grid-template-areas:
+        '.      content'
+        'header sidebar';
+        padding: 10px 70px;
+    }
+    
+    .price-card{
+        grid-area: content;
+    }
+    .input-card{
+        align-self: stretch;
+        margin-top: 20px;
+        padding-top: 30px;
+        max-width: 100%;
+        height: 425px;
+        grid-area: sidebar;
+    }
+
+    .input-container input{
+        height: 50px;
+        width: 87%;
+        margin: 0 30px 20px 30px;
+    }
+    .input-container input:last-child{
+        margin-bottom: 0px;
+    }
+    .button-submiter{
+        margin: 0 30px 20px 30px;
+        width: 87%;
+        height: 51px;
+    }
+    .paragrp{
+        padding: 65px 60px;
+        height: 100%;
+        grid-area: header;
+    }
+    .paragrp p{
+        margin-left: 55px;
+        font-size: 0.9em;
+        text-align: left;
+    }
+    .paragrp h1{
+        font-size:2.8rem;
+    }
+}
